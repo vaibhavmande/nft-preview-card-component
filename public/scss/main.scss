@@ -1,0 +1,23 @@
+// lets take care of fonts
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+$font-family: "Outfit", sans-serif;
+
+// colors
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$dark-blue: hsl(217, 54%, 11%);
+
+body {
+  font-family: $font-family;
+  // background-color: $dark-blue;
+}
+
+// This came by default. fix in the end
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
