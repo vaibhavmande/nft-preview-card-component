@@ -2,15 +2,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
 $font-family: "Outfit", sans-serif;
+$gap: 2rem;
 
 // colors
 $soft-blue: hsl(215, 51%, 70%);
 $cyan: hsl(178, 100%, 50%);
 $dark-blue: hsl(217, 54%, 11%);
+$card-bg: hsl(216, 50%, 16%);
+$white: hsl(0, 0%, 100%);
+
+// reset
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
 
 body {
   font-family: $font-family;
-  // background-color: $dark-blue;
+  background-color: $dark-blue;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 // This came by default. fix in the end
@@ -20,4 +48,84 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+// styles start from here
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: $card-bg;
+  padding: 1.25rem;
+  width: 300px;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+
+  .card-image {
+    height: 250px;
+    background: url("../images/image-equilibrium.jpg");
+    background-size: cover;
+    border-radius: 0.6rem;
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  .description {
+    color: $soft-blue;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+
+    .value {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      p {
+        color: $cyan;
+        display: inline;
+      }
+    }
+
+    .days-left {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      p {
+        display: inline;
+        color: $soft-blue;
+      }
+    }
+  }
+
+  .created-by {
+    display: flex;
+    align-items: center;
+    .photo {
+      background: url("../images/image-avatar.png");
+      background-size: cover;
+      height: 1.4rem;
+      aspect-ratio: 1;
+      border: 0.1rem solid white;
+      border-radius: 50%;
+      margin-inline-end: 0.8rem;
+    }
+
+    .light {
+      color: $soft-blue;
+    }
+
+    .user-name {
+      color: $white;
+    }
+  }
 }
