@@ -1,8 +1,5 @@
-// lets take care of fonts
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
-
 $font-family: "Outfit", sans-serif;
-$gap: 20px;
 
 // colors
 $soft-blue: hsl(215, 51%, 70%);
@@ -12,57 +9,42 @@ $dark-blue: hsl(217, 54%, 11%);
 $card-bg: hsl(216, 50%, 16%);
 $white: hsl(0, 0%, 100%);
 
-// reset
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
+// This is for the flex containers gap property.
+$gap: 20px;
+
+// mixins
+@mixin hover-color($color) {
+  &:hover {
+    cursor: pointer;
+    color: $color;
+  }
 }
 
-body {
-  font-family: $font-family;
-
-  background-color: $dark-blue;
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-img {
-  max-width: 100%;
-  display: block;
+@mixin inline-text-with-color($color) {
+  display: inline;
+  color: $color;
 }
 
 // utility classes
 .font-light {
   font-weight: 300;
 }
+
 .opacity-8 {
   opacity: 0.8;
 }
 
-// This came by default. fix in the end
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.flex {
+  display: flex;
+  gap: $gap;
 }
 
-// styles start from here
+// App styles start from here
 body {
+  font-family: $font-family;
+  background-color: $dark-blue;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -108,10 +90,7 @@ body {
     color: $white;
     font-size: 1.25rem;
     font-weight: 400;
-    &:hover {
-      color: $cyan;
-      cursor: pointer;
-    }
+    @include hover-color($cyan);
   }
 
   .description {
@@ -130,8 +109,7 @@ body {
       gap: 0.8rem;
       align-items: center;
       p {
-        color: $cyan;
-        display: inline;
+        @include inline-text-with-color($cyan);
       }
     }
 
@@ -140,8 +118,7 @@ body {
       gap: 0.8rem;
       align-items: center;
       p {
-        display: inline;
-        color: $soft-blue;
+        @include inline-text-with-color($soft-blue);
       }
     }
   }
@@ -173,10 +150,25 @@ body {
       color: $white;
       font-size: 14px;
       font-weight: 300;
-      &:hover {
-        color: $cyan;
-        cursor: pointer;
-      }
+      @include hover-color($cyan);
     }
+  }
+}
+
+//  Attribution
+.attribution {
+  position: fixed;
+  bottom: 2px;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+
+  a {
+    padding-inline-start: 4px;
+    color: hsl(228, 45%, 44%);
+  }
+
+  span {
+    padding-left: 4px;
   }
 }

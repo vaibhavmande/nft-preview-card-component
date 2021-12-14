@@ -1,33 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-body {
-  font-family: "Outfit", sans-serif;
-  background-color: #0d192b;
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
 .font-light {
   font-weight: 300;
 }
@@ -36,17 +7,16 @@ img {
   opacity: 0.8;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: #3e52a3;
+.flex {
+  display: flex;
+  gap: 20px;
 }
 
 body {
+  font-family: "Outfit", sans-serif;
+  background-color: #0d192b;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -96,8 +66,8 @@ body {
 }
 
 .card h2:hover {
-  color: #00fff7;
   cursor: pointer;
+  color: #00fff7;
 }
 
 .card .description {
@@ -119,8 +89,8 @@ body {
 }
 
 .card .meta .value p {
-  color: #00fff7;
   display: inline;
+  color: #00fff7;
 }
 
 .card .meta .days-left {
@@ -166,6 +136,23 @@ body {
 }
 
 .card .created-by .user-name:hover {
-  color: #00fff7;
   cursor: pointer;
+  color: #00fff7;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 2px;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  padding-inline-start: 4px;
+  color: #3e52a3;
+}
+
+.attribution span {
+  padding-left: 4px;
 }
