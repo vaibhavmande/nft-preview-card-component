@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/vaibhavmande/nft-preview-card-component)
-- Live Site URL: [Add live site URL here](https://vaibhavmande.com/nft-preview-card-component)
+- Solution URL: [https://github.com/vaibhavmande/nft-preview-card-component](https://github.com/vaibhavmande/nft-preview-card-component)
+- Live Site URL: [http://vaibhavmande.com/nft-preview-card-component/](http://vaibhavmande.com/nft-preview-card-component/)
 
 ## My process
 
