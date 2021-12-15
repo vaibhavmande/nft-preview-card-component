@@ -108,7 +108,7 @@ body {
       display: flex;
       gap: 0.8rem;
       align-items: center;
-      p {
+      .meta-content {
         @include inline-text-with-color($cyan);
       }
     }
@@ -117,7 +117,7 @@ body {
       display: flex;
       gap: 0.8rem;
       align-items: center;
-      p {
+      .meta-content {
         @include inline-text-with-color($soft-blue);
       }
     }

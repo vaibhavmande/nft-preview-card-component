@@ -88,7 +88,7 @@ body {
   align-items: center;
 }
 
-.card .meta .value p {
+.card .meta .value .meta-content {
   display: inline;
   color: #00fff7;
 }
@@ -99,7 +99,7 @@ body {
   align-items: center;
 }
 
-.card .meta .days-left p {
+.card .meta .days-left .meta-content {
   display: inline;
   color: #8bacda;
 }
